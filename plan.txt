@@ -1,0 +1,33 @@
+footwear-shop/
+│
+├── index.html          
+|
+|___ html/
+|     |__trangchu.html       #Trang chu
+|     |__sanpham.html        # Trang chi tiết sản phẩm
+|     |__khuyenmai.html      # Trang hien thi cac hang giay va trong cac hang giay co cac san pham khuyen mai
+|     |──gioithieu.html      # Trang gioi thieu website 
+|     |__tintuc.html         # Trang thong bao cac tin tuc san pham moi ra cua cac hang giay
+│     |__lienhe.html         # Trang lien he     
+|
+|
+├── css/
+│   └── style.css       # File style chính (hoặc file SCSS compile ra)
+|   |___ style-trangchu.css
+|   |___ style-sanpham.css
+|   |___ style-khuyenmai.css
+|   |___ style-tintuc.css
+|   |___ style-gioithieu.css
+│   |___ style-lienhe.css
+|
+├── js/
+│   ├── main.js         # Xử lý hiệu ứng chung, slider
+│   └── cart.js         # Xử lý logic giỏ hàng
+│   |__ trangchu.js
+|   |__ sanpham.js
+|   |__ khuyenmai.js
+|   |__ tintuc.js
+|   |__ gioithieu.js
+|   |__ lienhe.js
+|
+└── image/             # Thư mục chứa ảnh giày, logo

@@ -1,48 +1,276 @@
- :root {
-            --color-primary-bg: #1A202C; /* Deep Charcoal/Navy */
-            --color-text-light: #E2E8F0; /* Light Gray */
-            --color-accent-blue: #3B82F6; /* Vibrant Blue */
-            --color-accent-green: #6EE7B7; /* Subtle Mint Green */
-            --font-heading: 'Oxanium', sans-serif;
-            --font-body: 'Outfit', sans-serif;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Giữ cố định kích thước khối không bị tràn khi thêm padding */
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-        body {
-            font-family: var(--font-body);
-            background-color: var(--color-primary-bg);
-            color: var(--color-text-light);
-            line-height: 1.6;
-        }
+/*BACKGROUND AND LAYOUT*/
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Chiều cao phủ kín 100% màn hình hiển thị của trình duyệt */
+  background: url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=1600")
+    no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-heading);
-        }
+.overlay {
+  position: absolute; /* Định vị tuyệt đối theo khung cha .promo-landing */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.9) 30%,
+    rgba(255, 34, 34, 0.2) 100%
+  );
+  z-index: 1; /* Nằm trên ảnh nền (z-index: 0) nhưng dưới phần chữ (z-index: 2) */
+}
 
-        .btn-primary {
-            background-color: var(--color-accent-blue);
-            color: var(--color-primary-bg);
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.375rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #2563EB; /* Darker blue on hover */
-        }
+.container {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center; /* Căn giữa toàn bộ chữ bên trong */
+  max-width: 850px; /* Chiều rộng tối đa của khối là 850px */
+  padding: 0 20px; /* Khoảng cách đệm trái phải 20px khi xem trên điện thoại */
+  animation: fadeInUp 1s ease-out forwards;
+}
 
-        .product-card {
-            background-color: #2D3748; /* Slightly lighter dark for cards */
-            border-radius: 0.5rem;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .product-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            object-position: center;
-        }
+/*TYPOGRAPHY & BRAND*/
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.logo i,
+.logo span {
+  color: #ff2222;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #ff2222;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 16px;
+  letter-spacing: 3px;
+  border-radius: 3px; /* Bo góc nhẹ 3px */
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.1; /* Thu hẹp khoảng cách dòng giữa hàng trên và hàng dưới */
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.title span {
+  color: #ff2222;
+  display: block;
+  font-size: 48px;
+  margin-top: 5px;
+}
+
+/*OFFER SECTION*/
+.offer {
+  margin-bottom: 40px;
+}
+
+.offer-text {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.discount-box {
+  display: inline-flex; /* Kích hoạt flexbox nhưng giữ khối co giãn theo nội dung chữ */
+  align-items: center; /* Căn chữ thẳng hàng nhau theo chiều dọc */
+  gap: 15px; /* Khoảng cách giữa chữ "SALE UP TO" và số "40%" */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 25px;
+  border-left: 5px solid #ff2222;
+  margin-bottom: 15px;
+}
+
+.discount-box span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #bbb;
+}
+
+.discount-box .percentage {
+  /* Số phần trăm màu đỏ siêu đậm */
+  font-size: 36px;
+  font-weight: 900;
+  color: #ff2222;
+}
+
+.sub-text {
+  font-size: 13px;
+  color: #aaa;
+  font-style: italic; /* Biến chữ thành in nghiêng */
+}
+
+/*BUTTONS & FOOTER*/
+.actions {
+  /* Khối bọc 2 nút bấm */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.actions a {
+  padding: 16px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none; /* Xóa đường gạch chân mặc định của thẻ liên kết <a> */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* Tạo hiệu ứng chuyển động mượt mà khi rà chuột vào (hover) */
+}
+
+.btn-enter {
+  /* Thiết kế Nút hành động chính */
+  background-color: #ff2222;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 34, 34, 0.4); /* Tạo hiệu ứng đổ bóng phát sáng màu đỏ xung quanh nút */
+  animation: pulse 2s infinite ease-in-out; /* Chạy hiệu ứng pulse liên tục (infinite), mỗi chu kỳ co giãn kéo dài 2 giây */
+}
+
+.btn-enter:hover {
+  animation-play-state: paused;
+  background-color: #fff;
+  color: #111; /* Khi rà chuột đổi nền sang trắng, chữ đen */
+  transform: scale(1, 05); /* Nút nhích nhẹ lên trên 3px tạo hiệu ứng nổi */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-view-sale {
+  /* Thiết kế Nút hành động phụ */
+  background-color: transparent; /* Nền trong suốt */
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-view-sale:hover {
+  background-color: #fff;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+.footer {
+  position: absolute; /* Định vị cố định ăn theo khung lớn landing */
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #666;
+}
+
+/* RESPONSIVE: TỰ ĐỘNG CÂN CHỈNH GIAO DIỆN KHI XEM TRÊN ĐIỆN THOẠI MÀN HÌNH NHỎ */
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+  .title span {
+    font-size: 30px;
+  }
+  .actions {
+    /* Chuyển 2 nút đang nằm ngang thành hàng dọc để vừa màn hình đứng điện thoại */
+    flex-direction: column;
+    gap: 12px;
+  }
+  .discount-box .percentage {
+    font-size: 28px;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeInup {
+  /* Hiệu ứng: Hiện hình và trượt nhẹ từ dưới lên khi vừa tải trang */
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Bắt đầu ở vị trí thấp hơn vị trí gốc 30px */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Trở về vị trí chuẩn ban đầu */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 34, 34, 0.4);
+  }
+  50% {
+    transform: scale(1, 02);
+    box-shadow: 0 4px 25px rgba(255, 34, 34, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 34, 34, 0.4);
+  }
+}
+
+/* ANIMATED FALLING EFFECTS */
+#effect-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    top: -30px;
+  }
+  100% {
+    top: 100vh; /* Rơi xuống hẳn cạnh dưới màn hình */
+    transform: rotate(360deg); /* Vừa rơi vừa xoay tròn cánh hoa 360 độ */
+  }
+}
+
+@keyframes sway {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+
+.flower-flake {
+  position: absolute;
+  top: -30px;
+  user-select: none;
+  display: inline-block;
+  /* Áp dụng đồng thời 2 hiệu ứng: rơi xuống (fall) và lắc lư qua lại (sway) */
+  animation:
+    fall linear forwards,
+    sway ease-in-out infinite alternate;
+}
