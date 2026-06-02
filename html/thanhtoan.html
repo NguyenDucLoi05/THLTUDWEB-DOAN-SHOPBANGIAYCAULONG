@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán Đơn Hàng - LQ SPORT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-trangchu.css" />
+    <link rel="stylesheet" href="../css/style-thanhtoan.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="top-header">
+        <div class="header-search">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="shop-logo">
+          <a href="trangchu.html"><i class="fa-solid fa-bolt"></i> LQ<span>SPORT</span></a>
+        </div>
+        <div class="header-right">
+          <div class="header-hotline">
+            <i class="fa-solid fa-phone"></i>Hotline: <span>1115102005</span>
+          </div>
+          <div class="header-cart">
+            <a href="giohang.html" class="cart-icon">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span class="cart-badge">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="shop-navbar">
+        <ul class="nav-menu">
+          <li><a href="trangchu.html" class="menu-link">Trang Chủ</a></li>
+          <li><a href="sanpham.html" class="menu-link">Sản Phẩm</a></li>
+          <li><a href="" class="menu-link">Khuyến Mãi</a></li>
+          <li><a href="" class="menu-link">Tin Tức</a></li>
+          <li><a href="" class="menu-link">Giới Thiệu</a></li>
+          <li><a href="" class="menu-link">Liên Hệ</a></li>
+          <li><a href="labthuchanh.html" class="menu-link">Labs</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <main class="checkout-page-container">
+        <h2 class="page-title">THÔNG TIN THANH TOÁN</h2>
+        
+        <form id="form-checkout-order" class="checkout-content-wrapper">
+            <div class="checkout-billing-form">
+                <h3><i class="fa-solid fa-truck-ramp-box"></i> Thông tin giao hàng</h3>
+                
+                <div class="form-group">
+                    <label for="checkout-fullname">Họ và tên người nhận *</label>
+                    <input type="text" id="checkout-fullname" required placeholder="Ví dụ: Nguyễn Đức Lợi" />
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout-phone">Số điện thoại di động *</label>
+                    <input type="tel" id="checkout-phone" required placeholder="Ví dụ: 0901234567" />
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout-address">Địa chỉ nhận hàng chính xác *</label>
+                    <input type="text" id="checkout-address" required placeholder="Số nhà, tên đường, phường/xã, quận/huyện..." />
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout-note">Ghi chú đơn hàng (Tùy chọn)</label>
+                    <textarea id="checkout-note" rows="3" placeholder="Ghi chú về thời gian giao hàng, size giày mong muốn..."></textarea>
+                </div>
+
+                <h3 class="payment-method-title"><i class="fa-solid fa-credit-card"></i> Phương thức thanh toán</h3>
+                <div class="payment-methods-list">
+                    <label class="method-option-item">
+                        <input type="radio" name="payment_method" value="COD" checked />
+                        <span class="method-custom-radio"></span>
+                        <div class="method-desc">
+                            <strong>Thanh toán khi nhận hàng (COD)</strong>
+                            <p>Bạn sẽ thanh toán bằng tiền mặt cho shipper khi nhận được giày.</p>
+                        </div>
+                    </label>
+
+                    <label class="method-option-item">
+                        <input type="radio" name="payment_method" value="BANK" />
+                        <span class="method-custom-radio"></span>
+                        <div class="method-desc">
+                            <strong>Chuyển khoản ngân hàng qua mã QR</strong>
+                            <p>Hệ thống sẽ hiển thị mã QR kèm nội dung chuyển khoản ở bước tiếp theo.</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="checkout-order-review">
+                <h3><i class="fa-solid fa-receipt"></i> Đơn hàng của bạn</h3>
+                
+                <div class="checkout-items-summary" id="checkout-preview-list">
+                    </div>
+
+                <div class="checkout-totals-box">
+                    <div class="review-row">
+                        <span>Tạm tính:</span>
+                        <span id="checkout-subtotal">0đ</span>
+                    </div>
+                    <div class="review-row">
+                        <span>Phí vận chuyển:</span>
+                        <span class="free-shipping">Miễn phí</span>
+                    </div>
+                    <hr>
+                    <div class="review-row total-row">
+                        <span>Tổng thanh toán:</span>
+                        <span id="checkout-final-total">0đ</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit-order">XÁC NHẬN ĐẶT HÀNG</button>
+                <a href="giohang.html" class="btn-back-to-cart"><i class="fa-solid fa-angle-left"></i> Quay lại sửa giỏ hàng</a>
+            </div>
+        </form>
+    </main>
+
+    <footer class="shop-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 LQ SPORT. Tất cả các quyền được bảo lưu. Đồ án Website Thương mại điện tử.</p>
+        </div>
+    </footer>
+
+    <script src="../js/thanhtoan.js"></script>
+  </body>
+</html>

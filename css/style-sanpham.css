@@ -1,0 +1,118 @@
+.catalog-container {
+    max-width: 90%;
+    margin: 40px auto 80px;
+    font-family: Arial, sans-serif;
+}
+
+.catalog-header-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    border-bottom: 2px solid #ff4500;
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Lưới 5 cột thẳng tăm tắp đúng phom mẫu */
+.lining-products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.lining-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s;
+}
+
+.lining-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.lining-badge-sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #d8232a;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.lining-img-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.lining-info {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.lining-category {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.lining-title {
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.4;
+    height: 38px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.lining-price-box {
+    margin-top: 5px;
+}
+
+.price-sale {
+    color: #d8232a;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.price-origin {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 11.5px;
+    margin-left: 5px;
+}
+
+.btn-quick-add {
+    width: 100%;
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.btn-quick-add:hover {
+    background: #d03800;
+}
+
+@media (max-width: 1200px) {
+    .lining-products-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+    .lining-products-grid { grid-template-columns: repeat(2, 1fr); }
+}

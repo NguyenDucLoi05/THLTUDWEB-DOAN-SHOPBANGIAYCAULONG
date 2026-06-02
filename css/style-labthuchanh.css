@@ -1,0 +1,120 @@
+.lab-board-container {
+    max-width: 85%;
+    margin: 50px auto 100px;
+    font-family: Arial, sans-serif;
+}
+
+.lab-board-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.lab-board-header h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+}
+
+.lab-board-header h2 i {
+    color: #ff4500;
+    margin-right: 6px;
+}
+
+.lab-board-line {
+    width: 50px;
+    height: 3px;
+    background: #ff4500;
+    margin: 0 auto;
+}
+
+.lab-sub-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.lab-box-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.25s ease-in-out;
+}
+
+.lab-box-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 12px;
+}
+
+.lab-box-number {
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 0.5px;
+}
+
+.lab-box-count {
+    font-size: 11.5px;
+    color: #718096;
+    background: #f7fafc;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.lab-box-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sub-lab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid #cbd5e0;
+    color: #4a5568;
+    padding: 7px 14px;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+.sub-lab-btn i {
+    font-size: 13px;
+    color: #a0aec0;
+}
+
+/* Hiệu ứng tương tác đen cam thể thao */
+.lab-box-card:hover {
+    border-color: #ff4500;
+    box-shadow: 0 4px 20px rgba(255, 69, 0, 0.08);
+}
+
+.sub-lab-btn:hover {
+    background: #111;
+    border-color: #111;
+    color: #ffffff;
+}
+
+.sub-lab-btn:hover i {
+    color: #ff4500;
+}
+
+@media (max-width: 1024px) {
+    .lab-sub-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 650px) {
+    .lab-sub-grid { grid-template-columns: 1fr; }
+}

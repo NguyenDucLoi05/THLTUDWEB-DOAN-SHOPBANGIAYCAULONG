@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng - LQ Badminton Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-giohang.css" />
+    <link rel="stylesheet" href="../css/style-trangchu.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="top-header">
+        <div class="header-search">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="shop-logo">
+          <a href="trangchu.html"><i class="fa-solid fa-bolt"></i> LQ<span>SPORT</span></a>
+        </div>
+        <div class="header-right">
+          <div class="header-hotline">
+            <i class="fa-solid fa-phone"></i>Hotline: <span>1115102005</span>
+          </div>
+          <div class="header-cart">
+            <a href="giohang.html" class="cart-icon">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span class="cart-badge">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="shop-navbar">
+        <ul class="nav-menu">
+          <li><a href="trangchu.html" class="menu-link">Trang Chủ</a></li>
+          <li><a href="sanpham.html" class="menu-link">Sản Phẩm</a></li>
+          <li><a href="khuyenmai.html" class="menu-link">Khuyến Mãi</a></li>
+          <li><a href="tintuc.html" class="menu-link">Tin Tức</a></li>
+          <li><a href="gioithieu.html" class="menu-link">Giới Thiệu</a></li>
+          <li><a href="lienhe.html" class="menu-link">Liên Hệ</a></li>
+          <li><a href="labthuchanh.html" class="menu-link active">Bài Lab</a></li> 
+        </ul>
+      </nav>
+    </header>
+
+    <main class="cart-page-container">
+        <h2 class="page-title">GIỎ HÀNG CỦA BẠN</h2>
+        
+        <div class="cart-content-wrapper">
+            <div class="cart-items-list" id="cart-items-container">
+                </div>
+
+            <div class="cart-summary-card">
+                <h3>Tóm tắt đơn hàng</h3>
+                <div class="summary-row">
+                    <span>Tạm tính:</span>
+                    <span id="summary-subtotal">0đ</span>
+                </div>
+                <div class="summary-row">
+                    <span>Giao hàng:</span>
+                    <span class="free-shipping">Miễn phí</span>
+                </div>
+                <hr>
+                <div class="summary-row total-row">
+                    <span>Tổng tiền:</span>
+                    <span id="summary-total">0đ</span>
+                </div>
+                <button class="btn-checkout" id="btn-order-checkout">Thành toán ngay</button>
+                <a href="trangchu.html" class="btn-continue-shopping"><i class="fa-solid fa-arrow-left"></i> Tiếp tục mua sắm</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="shop-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 LQ SPORT. Tất cả các quyền được bảo lưu. Đồ án Website Thương mại điện tử.</p>
+        </div>
+    </footer>
+
+    <script src="../js/giohang.js"></script>
+  </body>
+</html>
