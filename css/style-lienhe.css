@@ -1,0 +1,129 @@
+.contact-page-container {
+    max-width: 80%;
+    margin: 50px auto 100px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.contact-header h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.contact-line {
+    width: 50px;
+    height: 3px;
+    background: #ff4500;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.contact-info-panel h3,
+.contact-form-panel h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    border-left: 3px solid #ff4500;
+    padding-left: 10px;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 18px;
+    color: #ff4500;
+    margin-top: 3px;
+    width: 20px;
+    text-align: center;
+}
+
+.info-item h4 {
+    font-size: 14px;
+    color: #111;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.info-item p {
+    font-size: 13.5px;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #111;
+}
+
+.submit-contact-btn {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+    align-self: flex-start;
+}
+
+.submit-contact-btn:hover {
+    background: #ff4500;
+}
+
+.contact-map {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    padding: 8px;
+    background: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

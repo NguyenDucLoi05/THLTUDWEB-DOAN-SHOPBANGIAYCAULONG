@@ -1,0 +1,85 @@
+.info-page-container {
+    max-width: 80%;
+    margin: 50px auto 100px;
+    font-family: Arial, sans-serif;
+}
+
+.info-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.info-header h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.info-line {
+    width: 50px;
+    height: 3px;
+    background: #ff4500;
+    margin: 0 auto;
+}
+
+.promo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.promo-ticket {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.promo-left {
+    background: #ff4500;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+}
+
+.promo-right {
+    padding: 20px 25px;
+    flex-grow: 1;
+}
+
+.promo-right span {
+    font-size: 10px;
+    background: #f4f4f4;
+    padding: 3px 6px;
+    font-weight: 700;
+    color: #666;
+}
+
+.promo-right h4 {
+    font-size: 15px;
+    margin: 10px 0 5px 0;
+    font-weight: 700;
+    color: #111;
+}
+
+.promo-right p {
+    font-size: 12.5px;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .promo-ticket { flex-direction: column; }
+    .promo-left { padding: 15px; }
+}
