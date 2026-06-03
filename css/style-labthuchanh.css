@@ -96,7 +96,6 @@
     color: #a0aec0;
 }
 
-/* Hiệu ứng tương tác đen cam thể thao */
 .lab-box-card:hover {
     border-color: #ff4500;
     box-shadow: 0 4px 20px rgba(255, 69, 0, 0.08);

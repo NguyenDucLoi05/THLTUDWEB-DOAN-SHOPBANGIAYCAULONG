@@ -106,7 +106,6 @@
     line-height: 1.4;
 }
 
-/* CỘT PHẢI - REVIEW ĐƠN HÀNG */
 .checkout-order-review {
     flex: 1;
     background: #fafafa;
@@ -134,7 +133,6 @@
     padding-bottom: 15px;
 }
 
-/* Thẻ sản phẩm mini */
 .checkout-mini-item {
     display: flex;
     justify-content: space-between;

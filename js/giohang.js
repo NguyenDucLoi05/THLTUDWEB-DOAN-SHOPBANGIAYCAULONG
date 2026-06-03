@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // Nút Thùng rác xóa hẳn (X)
         document.querySelectorAll(".btn-delete-item").forEach(button => {
             button.addEventListener("click", function () {
                 const id = this.getAttribute("data-id");
@@ -101,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnCheckout = document.getElementById("btn-order-checkout");
 if (btnCheckout) {
     btnCheckout.addEventListener("click", function() {
-        // Kiểm tra nếu giỏ hàng có hàng thì mới cho đi tiếp
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         if (cart.length === 0) {
             alert("Giỏ hàng trống, không thể thanh toán!");
