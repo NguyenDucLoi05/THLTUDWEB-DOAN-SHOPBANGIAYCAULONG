@@ -269,8 +269,56 @@
   top: -30px;
   user-select: none;
   display: inline-block;
-  /* Áp dụng đồng thời 2 hiệu ứng: rơi xuống (fall) và lắc lư qua lại (sway) */
   animation:
     fall linear forwards,
     sway ease-in-out infinite alternate;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  .header-search {
+    width: 100%;
+    order: 3;
+  }
+  .shop-logo {
+    order: 1;
+  }
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+    order: 2;
+    gap: 10px;
+  }
+  .shop-navbar {
+    padding: 0;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-menu {
+    display: flex;
+    white-space: nowrap;
+  }
+  .menu-link {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
 }
